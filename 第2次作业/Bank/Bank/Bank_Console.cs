@@ -1,8 +1,8 @@
 namespace Bank
 {
-    public partial class Form1 : Form
+    public partial class Bank_Console : Form
     {
-        public Form1()
+        public Bank_Console()
         {
             InitializeComponent();
         }
