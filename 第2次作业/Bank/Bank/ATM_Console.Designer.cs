@@ -36,6 +36,8 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             button3 = new Button();
+            label4 = new Label();
+            label5 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -67,7 +69,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(216, 151);
+            button1.Location = new Point(216, 171);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 3;
@@ -76,7 +78,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(216, 205);
+            button2.Location = new Point(216, 225);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 5;
@@ -85,32 +87,53 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(333, 151);
+            textBox1.Location = new Point(333, 171);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(173, 23);
             textBox1.TabIndex = 6;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(333, 205);
+            textBox2.Location = new Point(333, 225);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(173, 23);
             textBox2.TabIndex = 7;
             // 
             // button3
             // 
-            button3.Location = new Point(362, 278);
+            button3.Location = new Point(362, 298);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 8;
             button3.Text = "确认";
             button3.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(68, 94);
+            label4.Name = "label4";
+            label4.Size = new Size(56, 17);
+            label4.TabIndex = 9;
+            label4.Text = "当前余额";
+            label4.Click += label4_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(130, 94);
+            label5.Name = "label5";
+            label5.Size = new Size(43, 17);
+            label5.TabIndex = 10;
+            label5.Text = "label5";
+            // 
             // ATM_Console
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label5);
+            Controls.Add(label4);
             Controls.Add(button3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -135,5 +158,7 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private Button button3;
+        private Label label4;
+        private Label label5;
     }
 }

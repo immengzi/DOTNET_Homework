@@ -80,6 +80,7 @@
             button1.TabIndex = 5;
             button1.Text = "登录";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox2
             // 
@@ -87,6 +88,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(114, 23);
             textBox2.TabIndex = 4;
+            textBox2.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -144,6 +146,7 @@
             button2.TabIndex = 5;
             button2.Text = "登录";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // textBox3
             // 
@@ -151,6 +154,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(114, 23);
             textBox3.TabIndex = 4;
+            textBox3.UseSystemPasswordChar = true;
             // 
             // label5
             // 

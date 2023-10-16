@@ -19,8 +19,6 @@ namespace Bank
             InitializeComponent();
         }
 
-        ArrayList info = new ArrayList { };
-
         private void button1_Click(object sender, EventArgs e)
         {
             string id = textBox1.Text;
@@ -42,7 +40,7 @@ namespace Bank
                 MessageBox.Show("密码不可为空");
                 return;
             }
-            else if (info.Contains(id))
+            else if (InfoHolder.Info.Contains(id))
             {
                 MessageBox.Show("账号已经存在");
                 return;
@@ -54,9 +52,9 @@ namespace Bank
             }
             else
             {
-                info.Add(id);
-                info.Add(name);
-                info.Add(password);
+                InfoHolder.Info.Add(id);
+                InfoHolder.Info.Add(name);
+                InfoHolder.Info.Add(password);
                 MessageBox.Show("注册成功！");
             }
         }
