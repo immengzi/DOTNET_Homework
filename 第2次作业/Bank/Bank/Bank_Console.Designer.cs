@@ -43,6 +43,7 @@
             textBox4 = new TextBox();
             label6 = new Label();
             label7 = new Label();
+            label8 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -50,14 +51,16 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(362, 49);
+            label1.Font = new Font("Microsoft YaHei UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(356, 43);
             label1.Name = "label1";
-            label1.Size = new Size(68, 17);
+            label1.Size = new Size(84, 20);
             label1.TabIndex = 0;
             label1.Text = "珞珈山银行";
             // 
             // panel1
             // 
+            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(button1);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(label4);
@@ -121,6 +124,7 @@
             // 
             // panel2
             // 
+            panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(button2);
             panel2.Controls.Add(textBox3);
             panel2.Controls.Add(label5);
@@ -182,16 +186,28 @@
             label7.TabIndex = 0;
             label7.Text = "ATM2";
             // 
-            // Form1
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Cursor = Cursors.Hand;
+            label8.Location = new Point(582, 74);
+            label8.Name = "label8";
+            label8.Size = new Size(140, 17);
+            label8.TabIndex = 7;
+            label8.Text = "还没有账号？注册一个。";
+            label8.Click += label8_Click;
+            // 
+            // Bank_Console
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label8);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(label1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "Bank_Console";
+            Text = "Bank";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -217,5 +233,6 @@
         private TextBox textBox4;
         private Label label6;
         private Label label7;
+        private Label label8;
     }
 }
