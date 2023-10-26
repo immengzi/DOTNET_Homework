@@ -15,11 +15,8 @@ namespace Bank
         public ATM_Console()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            label2.Text = "0";
+            label5.Text = "0";
         }
     }
 }
