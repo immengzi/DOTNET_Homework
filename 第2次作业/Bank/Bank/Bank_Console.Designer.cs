@@ -52,9 +52,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft YaHei UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(356, 43);
+            label1.Location = new Point(458, 51);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(84, 20);
+            label1.Size = new Size(107, 25);
             label1.TabIndex = 0;
             label1.Text = "珞珈山银行";
             // 
@@ -67,16 +68,18 @@
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(80, 112);
+            panel1.Location = new Point(103, 132);
+            panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(262, 268);
+            panel1.Size = new Size(336, 315);
             panel1.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(94, 196);
+            button1.Location = new Point(121, 231);
+            button1.Margin = new Padding(4);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(96, 27);
             button1.TabIndex = 5;
             button1.Text = "登录";
             button1.UseVisualStyleBackColor = true;
@@ -84,43 +87,48 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(85, 129);
+            textBox2.Location = new Point(109, 152);
+            textBox2.Margin = new Padding(4);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(114, 23);
+            textBox2.Size = new Size(145, 27);
             textBox2.TabIndex = 4;
             textBox2.UseSystemPasswordChar = true;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(44, 132);
+            label4.Location = new Point(57, 155);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(35, 17);
+            label4.Size = new Size(43, 20);
             label4.TabIndex = 3;
             label4.Text = "密码:";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(85, 85);
+            textBox1.Location = new Point(109, 100);
+            textBox1.Margin = new Padding(4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(114, 23);
+            textBox1.Size = new Size(145, 27);
             textBox1.TabIndex = 2;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(44, 88);
+            label3.Location = new Point(57, 104);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(35, 17);
+            label3.Size = new Size(43, 20);
             label3.TabIndex = 1;
             label3.Text = "账号:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(110, 14);
+            label2.Location = new Point(141, 16);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(42, 17);
+            label2.Size = new Size(53, 20);
             label2.TabIndex = 0;
             label2.Text = "ATM1";
             // 
@@ -133,16 +141,18 @@
             panel2.Controls.Add(textBox4);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(label7);
-            panel2.Location = new Point(451, 112);
+            panel2.Location = new Point(580, 132);
+            panel2.Margin = new Padding(4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(262, 268);
+            panel2.Size = new Size(336, 315);
             panel2.TabIndex = 6;
             // 
             // button2
             // 
-            button2.Location = new Point(94, 196);
+            button2.Location = new Point(121, 231);
+            button2.Margin = new Padding(4);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(96, 27);
             button2.TabIndex = 5;
             button2.Text = "登录";
             button2.UseVisualStyleBackColor = true;
@@ -150,43 +160,48 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(85, 129);
+            textBox3.Location = new Point(109, 152);
+            textBox3.Margin = new Padding(4);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(114, 23);
+            textBox3.Size = new Size(145, 27);
             textBox3.TabIndex = 4;
             textBox3.UseSystemPasswordChar = true;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(44, 132);
+            label5.Location = new Point(57, 155);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(35, 17);
+            label5.Size = new Size(43, 20);
             label5.TabIndex = 3;
             label5.Text = "密码:";
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(85, 85);
+            textBox4.Location = new Point(109, 101);
+            textBox4.Margin = new Padding(4);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(114, 23);
+            textBox4.Size = new Size(145, 27);
             textBox4.TabIndex = 2;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(44, 88);
+            label6.Location = new Point(57, 104);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(35, 17);
+            label6.Size = new Size(43, 20);
             label6.TabIndex = 1;
             label6.Text = "账号:";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(110, 14);
+            label7.Location = new Point(141, 16);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(42, 17);
+            label7.Size = new Size(53, 20);
             label7.TabIndex = 0;
             label7.Text = "ATM2";
             // 
@@ -194,22 +209,24 @@
             // 
             label8.AutoSize = true;
             label8.Cursor = Cursors.Hand;
-            label8.Location = new Point(582, 74);
+            label8.Location = new Point(748, 87);
+            label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(140, 17);
+            label8.Size = new Size(174, 20);
             label8.TabIndex = 7;
             label8.Text = "还没有账号？注册一个。";
             label8.Click += label8_Click;
             // 
             // Bank_Console
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1029, 529);
             Controls.Add(label8);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(label1);
+            Margin = new Padding(4);
             Name = "Bank_Console";
             Text = "Bank";
             panel1.ResumeLayout(false);

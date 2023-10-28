@@ -1,7 +1,16 @@
+using System.Xml.Linq;
+
 namespace Bank
 {
     public partial class Bank_Console : Form
     {
+        internal static List<Account> accounts = new List<Account>();
+
+        public static bool IsAccountExist(string id)
+        {
+            return accounts.Any(account => account.Id == id);
+        }
+
         public Bank_Console()
         {
             InitializeComponent();
@@ -19,61 +28,75 @@ namespace Bank
             string password = textBox2.Text;
             if (string.IsNullOrEmpty(id))
             {
-                MessageBox.Show("ÕËºÅ²»¿ÉÎª¿Õ");
+                MessageBox.Show("è´¦å·ä¸å¯ä¸ºç©º");
                 return;
             }
             else if (string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("ÃÜÂë²»¿ÉÎª¿Õ");
+                MessageBox.Show("å¯†ç ä¸å¯ä¸ºç©º");
                 return;
             }
-            else if (!InfoHolder.Info.Contains(id))
+            Account account = accounts.Find(a => a.Id == id);
+            string _password; // id å¯¹åº”çš„è´¦å·çš„å¯†ç 
+            if (account == null)
             {
-                MessageBox.Show("ÕËºÅ²»´æÔÚ");
+                MessageBox.Show("è´¦å·ä¸å­˜åœ¨");
                 return;
-            }
-            else if (InfoHolder.Info.Contains(id) && InfoHolder.Info.Contains(password))
-            {
-                MessageBox.Show("µÇÂ¼³É¹¦£¡");
-                ATM_Console atm_Console = new ATM_Console();
-                atm_Console.Show();
             }
             else
             {
-                MessageBox.Show("ÃÜÂë´íÎó");
-                return;
+                _password = account.password;
+                if (_password == password)
+                {
+                    MessageBox.Show("ç™»å½•æˆåŠŸï¼");
+                    ATM_Console atm_Console = new ATM_Console(account);
+                    atm_Console.Show();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("å¯†ç é”™è¯¯");
+                    return;
+                }
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string id = textBox1.Text;
-            string password = textBox2.Text;
+            string id = textBox4.Text;
+            string password = textBox3.Text;
             if (string.IsNullOrEmpty(id))
             {
-                MessageBox.Show("ÕËºÅ²»¿ÉÎª¿Õ");
+                MessageBox.Show("è´¦å·ä¸å¯ä¸ºç©º");
                 return;
             }
             else if (string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("ÃÜÂë²»¿ÉÎª¿Õ");
+                MessageBox.Show("å¯†ç ä¸å¯ä¸ºç©º");
                 return;
             }
-            else if (!InfoHolder.Info.Contains(id))
+            Account account = accounts.Find(a => a.Id == id);
+            string _password; // id å¯¹åº”çš„è´¦å·çš„å¯†ç 
+            if (account == null)
             {
-                MessageBox.Show("ÕËºÅ²»´æÔÚ");
+                MessageBox.Show("è´¦å·ä¸å­˜åœ¨");
                 return;
-            }
-            else if (InfoHolder.Info.Contains(id) && InfoHolder.Info.Contains(password))
-            {
-                MessageBox.Show("µÇÂ¼³É¹¦£¡");
-                ATM_Console atm_Console = new ATM_Console();
-                atm_Console.Show();
             }
             else
             {
-                MessageBox.Show("ÃÜÂë´íÎó");
-                return;
+                _password = account.password;
+                if (_password == password)
+                {
+                    MessageBox.Show("ç™»å½•æˆåŠŸï¼");
+                    ATM_Console atm_Console = new ATM_Console(account);
+                    atm_Console.Show();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("å¯†ç é”™è¯¯");
+                    return;
+                }
             }
         }
     }

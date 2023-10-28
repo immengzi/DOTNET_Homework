@@ -9,40 +9,25 @@ namespace Bank
 {
     class ATM
     {
-        BigMoneyArgs bigMoneyArgs = new BigMoneyArgs();
-        // bigMoneyArgs.Handle();
-
+        public ATM(double Balance) { this.Balance = Balance; }
         public int Id { get; set; }
-        public int Balance { get; set; }
-        public void Deposit(Account account,int amount)
+        public double Balance { get; set; }
+        public void Deposit(Account account, double amount)
         {
             account.Deposit(amount);
             Balance += amount;
         }
-        public void Withdraw(Account account, int amount)
+        public void Withdraw(Account account, double amount)
         {
             if (Balance >= amount)
             {
                 account.Withdraw(amount);
                 Balance -= amount;
             }
-        }
-    }
-    class BigMoneyArgs
-    {
-        private Account account { get; set; }
-        private int amount { get; set; }
-
-        public event EventHandler BigMoneyFetched;
-        internal void Handle()
-        {
-            EventArgs e = new EventArgs();
-            BigMoneyFetched += Warn;
-            BigMoneyFetched(amount, e);
-        }
-        void Warn(object sender, EventArgs e)
-        {
-            Console.WriteLine($"尊敬的 {account}，你要取走的数额大于 10000 元: {sender}");
+            else
+            {
+                Console.WriteLine("ATM 机余额不足！");
+            }
         }
     }
 }

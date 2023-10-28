@@ -40,7 +40,7 @@ namespace Bank
                 MessageBox.Show("密码不可为空");
                 return;
             }
-            else if (InfoHolder.Info.Contains(id))
+            else if (Bank_Console.IsAccountExist(id))
             {
                 MessageBox.Show("账号已经存在");
                 return;
@@ -52,10 +52,9 @@ namespace Bank
             }
             else
             {
-                InfoHolder.Info.Add(id);
-                InfoHolder.Info.Add(name);
-                InfoHolder.Info.Add(password);
+                Bank_Console.accounts.Add(new Account(id, name, password));
                 MessageBox.Show("注册成功！");
+                Close();
             }
         }
     }
