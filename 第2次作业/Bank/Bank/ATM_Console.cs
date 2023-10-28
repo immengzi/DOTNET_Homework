@@ -8,6 +8,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Bank
 {
@@ -35,14 +36,22 @@ namespace Bank
         {
             double amount = double.Parse(textBox1.Text);
             if (radioButton1.Checked) { atm.Deposit(account, amount); }
-            if (radioButton2.Checked)
+            else
             {
                 if (amount > 10000)
                 {
                     myBigMoney.ActivateBigMoney(account, amount);
                 }
-                atm.Withdraw(account, amount);
+                try
+                {
+                    atm.Withdraw(account, amount);
+                }
+                catch (BadCashException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
+            textBox1.Text = "";
             UpdateLabels();
         }
         private void UpdateLabels()
