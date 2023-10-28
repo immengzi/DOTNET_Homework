@@ -15,10 +15,15 @@ namespace Bank
     {
         ATM atm = new ATM(500);
         private Account account;
+        private BigMoney myBigMoney;
+        private BigMoneyHandlerClass myBigMoneyHandler;
 
         internal ATM_Console(Account _account)
         {
             InitializeComponent();
+            myBigMoney = new BigMoney();
+            myBigMoneyHandler = new BigMoneyHandlerClass(myBigMoney);
+
             radioButton1.Checked = true;
             this.account = _account;
             label2.Text = "欢迎您，" + account.Name;
@@ -30,7 +35,14 @@ namespace Bank
         {
             double amount = double.Parse(textBox1.Text);
             if (radioButton1.Checked) { atm.Deposit(account, amount); }
-            if (radioButton2.Checked) { atm.Withdraw(account, amount); }
+            if (radioButton2.Checked)
+            {
+                if (amount > 10000)
+                {
+                    myBigMoney.ActivateBigMoney(account, amount);
+                }
+                atm.Withdraw(account, amount);
+            }
             UpdateLabels();
         }
         private void UpdateLabels()

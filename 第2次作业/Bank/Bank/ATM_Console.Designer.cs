@@ -73,7 +73,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(201, 93);
+            label5.Location = new Point(214, 93);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(53, 20);
@@ -123,7 +123,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(858, 453);
+            label1.Location = new Point(869, 453);
             label1.Name = "label1";
             label1.Size = new Size(53, 20);
             label1.TabIndex = 15;
@@ -141,11 +141,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(714, 453);
+            label4.Location = new Point(696, 453);
             label4.Name = "label4";
-            label4.Size = new Size(149, 20);
+            label4.Size = new Size(157, 20);
             label4.TabIndex = 17;
-            label4.Text = "该ATM机的余额为：";
+            label4.Text = "该 ATM 机的余额为：";
             // 
             // ATM_Console
             // 
