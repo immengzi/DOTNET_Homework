@@ -51,7 +51,7 @@
             this.设置ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1032, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1034, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -97,7 +97,7 @@
             // 
             this.richTextBox1.Location = new System.Drawing.Point(0, 31);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(800, 393);
+            this.richTextBox1.Size = new System.Drawing.Size(725, 393);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
@@ -141,16 +141,16 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(806, 31);
+            this.listBox1.Location = new System.Drawing.Point(731, 31);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(219, 394);
+            this.listBox1.Size = new System.Drawing.Size(294, 394);
             this.listBox1.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 450);
+            this.ClientSize = new System.Drawing.Size(1034, 450);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);

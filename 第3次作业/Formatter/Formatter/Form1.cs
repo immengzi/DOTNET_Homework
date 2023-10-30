@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -75,6 +76,7 @@ namespace Formatter
             counts_Update(source);
             label2.Text = lineCount.ToString();
             label3.Text = wordCount.ToString();
+            count_Word_Times(source);
         }
 
         private void counts_Update(string _source)
@@ -89,6 +91,37 @@ namespace Formatter
                 var trimmedLine = line.Trim();
                 string[] words = trimmedLine.Split(' ');
                 wordCount += words.Length;
+            }
+        }
+
+        private void count_Word_Times(string _source)
+        {
+            Dictionary<string, int> wordTimes = new Dictionary<string, int>();
+            _source.Trim();
+            string pattern = @"[<>./\[\];\n{}()]";
+            string pattern2 = @"\s+";
+            _source = Regex.Replace(_source, pattern, " ");
+            _source = Regex.Replace(_source, pattern2, " ");
+            string[] words = _source.Split(' ');
+            foreach (var word in words)
+            {
+                if (wordTimes.ContainsKey(word))
+                {
+                    wordTimes[word]++;
+                }
+                else if (word != " " && word != "")
+                {
+                    wordTimes.Add(word, 1);
+                }
+                else
+                {
+                    continue;
+                }
+            }
+
+            foreach (var item in wordTimes)
+            {
+                listBox1.Items.Add(item.Key + " " + item.Value);
             }
         }
     }
